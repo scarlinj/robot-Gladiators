@@ -61,6 +61,10 @@ var fight = function (enemyName) {
                 console.log("playerMoney", playerMoney);
                 break;
             }
+
+            // if no (false), ask question again by running fight() again
+            else fight();
+
         }
         // if player choses to fight, then fight
         if (promptFight === "fight" || promptFight === "FIGHT") {
@@ -92,10 +96,6 @@ var fight = function (enemyName) {
                 window.alert(playerName + " still has " + playerHealth + " health left.");
             }
 
-            // if no (false), ask question again by running fight() again
-            // else {
-            //     fight();
-            // }
         }
     }
 };
